@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".activity.DetailActivity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/i_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickBack"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/t_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@+id/i_back"
+            app:layout_constraintTop_toBottomOf="@+id/i_back"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:text="Kosmonaut"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/view_stick"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toRightOf="@+id/t_title"
+            app:layout_constraintTop_toTopOf="@+id/t_title"
+            app:layout_constraintBottom_toBottomOf="@+id/t_title"
+            android:layout_marginLeft="10dp"
+            android:background="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toRightOf="@+id/view_stick"
+            app:layout_constraintTop_toTopOf="@+id/t_title"
+            app:layout_constraintBottom_toBottomOf="@+id/t_title"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="10dp"
+            android:text="Portal Group"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/t_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/t_title"
+            app:layout_constraintTop_toBottomOf="@+id/t_title"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="İsim Belirtilmemiş"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/i_image"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/kosmonout_logo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@id/t_name"
+            app:layout_constraintRight_toRightOf="@id/t_name"
+            app:layout_constraintTop_toBottomOf="@+id/t_name" />
+
+        <TextView
+            android:id="@+id/t_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@+id/i_image"
+            app:layout_constraintTop_toBottomOf="@+id/i_image"
+            app:layout_constraintRight_toRightOf="@id/i_image"
+            android:text="Açıklama Belirtilmemiş"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/t_flightNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/t_detail"
+            app:layout_constraintTop_toBottomOf="@+id/t_detail"
+            android:text="Flight Number"
+            android:textColor="@color/black"
+            app:layout_constraintRight_toRightOf="@+id/t_detail"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/t_flightNumberInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@+id/t_flightNumber"
+            app:layout_constraintTop_toBottomOf="@id/t_flightNumber"
+            app:layout_constraintRight_toRightOf="@id/t_flightNumber"
+            android:text="Belirtilmemiş"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/t_fireDateTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/t_flightNumberInfo"
+            app:layout_constraintTop_toBottomOf="@+id/t_flightNumberInfo"
+            android:text="Fire Date"
+            android:textColor="@color/black"
+            app:layout_constraintRight_toRightOf="@+id/t_flightNumberInfo"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/t_fireDateInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@+id/t_fireDateTitle"
+            app:layout_constraintTop_toBottomOf="@id/t_fireDateTitle"
+            app:layout_constraintRight_toRightOf="@id/t_fireDateTitle"
+            android:text="Belirtilmemiş"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/t_rocketTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/t_fireDateInfo"
+            app:layout_constraintTop_toBottomOf="@+id/t_fireDateInfo"
+            android:text="Rocket"
+            android:textColor="@color/black"
+            app:layout_constraintRight_toRightOf="@+id/t_fireDateInfo"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/t_rocketInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@+id/t_rocketTitle"
+            app:layout_constraintTop_toBottomOf="@id/t_rocketTitle"
+            app:layout_constraintRight_toRightOf="@id/t_rocketTitle"
+            android:text="Belirtilmemiş"
+            android:textSize="16sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
